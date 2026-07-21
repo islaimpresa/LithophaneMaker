@@ -6,13 +6,13 @@
   <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iIzI0OWFhOCIgcng9IjgiLz4KICAKICA8IS0tIDNEIFByaW50ZXIvQ3ViZSBzaWxob3VldHRlIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMyLCAzMikiPgogICAgPCEtLSBDdWJlIHNoYXBlIChpc29tZXRyaWMgM0QgcHJpbnQpIC0tPgogICAgPHBhdGggZD0iTSAtMTAgLTUgTCAwIC0xMiBMIDEwIC01IEwgMCAyIFoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuOSIvPgogICAgPHBhdGggZD0iTSAwIDIgTCAxMCAtNSBMIDEwIDggTCAwIDE1IFoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuNyIvPgogICAgPHBhdGggZD0iTSAwIDIgTCAtMTAgLTUgTCAtMTAgOCBMIDAgMTUgWiIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC44Ii8+CiAgPC9nPgo8L3N2Zz4K" type="image/svg+xml">
   <title>Lithophane Maker — Photo to 3D-Printable STL | Isla Impresa</title>
   <meta name="description" content="Free lithophane maker: turn any photo into a print-ready STL in your browser. Flat &amp; curved shapes, live 3D preview, brightness/contrast/gamma, frame border, expert print settings. EN/ES, nothing uploaded.">
-  <link rel="canonical" href="https://islaimpresa.github.io/LithophaneMaker/">
+  <link rel="canonical" href="https://islaimpresa.com/LithophaneMaker/">
   <meta property="og:title" content="Lithophane Maker — Isla Impresa">
   <meta property="og:description" content="Photo → print-ready lithophane STL, entirely in your browser. Flat &amp; curved, live 3D preview, expert controls. Free, bilingual, private.">
-  <meta property="og:url" content="https://islaimpresa.github.io/LithophaneMaker/">
-  <meta property="og:image" content="https://islaimpresa.github.io/og.png">
+  <meta property="og:url" content="https://islaimpresa.com/LithophaneMaker/">
+  <meta property="og:image" content="https://islaimpresa.com/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://islaimpresa.github.io/og.png">
+  <meta name="twitter:image" content="https://islaimpresa.com/og.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -147,8 +147,18 @@
   @keyframes spin{to{transform:rotate(360deg)}}
   .hist{width:100%;height:44px;display:block;margin-top:4px;border:1px solid var(--line);border-radius:6px;background:var(--field)}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lithophane Maker","applicationCategory":"MultimediaApplication","operatingSystem":"Web browser","url":"https://islaimpresa.github.io/LithophaneMaker/","description":"Convert any photo into a print-ready 3D lithophane STL in the browser. Flat and curved shapes, live 3D preview, brightness/contrast/gamma controls, optional frame, and expert print-setting guidance.","inLanguage":["en","es"],"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Isla Impresa","url":"https://islaimpresa.github.io/","sameAs":["https://www.instagram.com/islaimpresa/","https://www.facebook.com/Islaimpresa/"]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lithophane Maker","applicationCategory":"MultimediaApplication","operatingSystem":"Web browser","url":"https://islaimpresa.com/LithophaneMaker/","description":"Convert any photo into a print-ready 3D lithophane STL in the browser. Flat and curved shapes, live 3D preview, brightness/contrast/gamma controls, optional frame, and expert print-setting guidance.","inLanguage":["en","es"],"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Isla Impresa","url":"https://islaimpresa.com/","sameAs":["https://www.instagram.com/islaimpresa/","https://www.facebook.com/Islaimpresa/"]}}</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- Isla Impresa analytics — uncomment ONE provider below -->
+<!-- PLAUSIBLE (recommended: no cookies, no consent banner)
+<script defer data-domain="islaimpresa.com" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+-->
+<!-- GA4 (free, but requires a cookie consent banner) — replace G-XXXXXXXXXX
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});</script>
+-->
+<script>window.isla=function(n,p){try{if(typeof window.plausible==="function"){window.plausible(n,p?{props:p}:undefined);}if(typeof window.gtag==="function"){window.gtag('event',n.toLowerCase().replace(/[^a-z0-9]+/g,'_'),p||{});}}catch(e){}};</script>
 </head>
 
 <body>
@@ -165,25 +175,25 @@
     </div>
   </div>
   <div class="toolnav">
-    <a href="https://islaimpresa.github.io/">← Isla Impresa</a>
+    <a href="https://islaimpresa.com/">← Isla Impresa</a>
     <span class="sep">•</span>
-    <a href="https://islaimpresa.github.io/FDMCalculator/" id="navFdm">FDM Calculator</a>
+    <a href="https://islaimpresa.com/FDMCalculator/" id="navFdm">FDM Calculator</a>
     <span class="sep">•</span>
-    <a href="https://islaimpresa.github.io/SLACalculator/" id="navResin">Resin Calculator</a>
+    <a href="https://islaimpresa.com/SLACalculator/" id="navResin">Resin Calculator</a>
     <span class="sep">•</span>
-    <a href="https://islaimpresa.github.io/FilamentTracker/" id="navTracker">Filament Tracker</a>
+    <a href="https://islaimpresa.com/FilamentTracker/" id="navTracker">Filament Tracker</a>
     <span class="sep">•</span>
-    <a href="https://islaimpresa.github.io/ResinTracker/" id="navRTracker">Resin Tracker</a>
+    <a href="https://islaimpresa.com/ResinTracker/" id="navRTracker">Resin Tracker</a>
     <span class="sep">•</span>
-    <a href="https://islaimpresa.github.io/UnitConverter/" id="navConverter">Unit Converter</a>
+    <a href="https://islaimpresa.com/UnitConverter/" id="navConverter">Unit Converter</a>
     <span class="sep">•</span>
-    <a href="https://islaimpresa.github.io/Troubleshooter/" id="navTrouble">Troubleshooter</a>
+    <a href="https://islaimpresa.com/Troubleshooter/" id="navTrouble">Troubleshooter</a>
     <span class="sep">•</span>
-    <a href="https://islaimpresa.github.io/MaterialSelector/" id="navMaterial">Material Selector</a>
+    <a href="https://islaimpresa.com/MaterialSelector/" id="navMaterial">Material Selector</a>
     <span class="sep">•</span>
-    <a href="https://islaimpresa.github.io/DryingGuide/" id="navDrying">Drying Guide</a>
+    <a href="https://islaimpresa.com/DryingGuide/" id="navDrying">Drying Guide</a>
     <span class="sep">•</span>
-    <a href="https://islaimpresa.github.io/ToleranceCalculator/" id="navTolerance">Tolerance Calculator</a>
+    <a href="https://islaimpresa.com/ToleranceCalculator/" id="navTolerance">Tolerance Calculator</a>
   </div>
   <p class="sub"><b id="slogan">Technical Mastery. Creative Design. Made in Puerto Rico.</b><br><span id="subtext">Turn any photo into a print-ready lithophane — right in your browser.</span></p>
 
@@ -308,7 +318,7 @@
   <div class="cta-litho">
     <h3 id="ctaTitle">Rather have it printed, backlit, and framed?</h3>
     <p id="ctaText">We print lithophanes in white PLA, mount them in a frame with even LED backlighting, and ship a finished keepsake. Send us your photo — we handle the rest.</p>
-    <a href="https://wa.me/17876013931?text=Hola%20Isla%20Impresa%20%F0%9F%91%8B%20Quiero%20cotizar%20un%20lithophane%20personalizado." target="_blank" rel="noopener" id="ctaBtn">Commission a lithophane →</a>
+    <a href="https://wa.me/17876013931?text=Hola%20Isla%20Impresa%20%F0%9F%91%8B%20Quiero%20cotizar%20un%20lithophane%20personalizado." target="_blank" rel="noopener" id="ctaBtn" onclick="isla('Commission CTA',{page:'LithophaneMaker'})">Commission a lithophane →</a>
   </div>
 
   <footer>
@@ -328,7 +338,7 @@
     <div class="social">
       <a href="https://www.instagram.com/islaimpresa/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.facebook.com/Islaimpresa/" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://wa.me/17876013931?text=Hola%20Isla%20Impresa%20%F0%9F%91%8B%20Tengo%20una%20idea%20que%20me%20gustar%C3%ADa%20cotizar." target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://wa.me/17876013931?text=Hola%20Isla%20Impresa%20%F0%9F%91%8B%20Tengo%20una%20idea%20que%20me%20gustar%C3%ADa%20cotizar." target="_blank" rel="noopener" onclick="isla('Commission CTA',{page:'LithophaneMaker'})">WhatsApp</a>
     </div>
     <span id="footerText">© Isla Impresa · 3D Printing &amp; Custom Design · Ponce, Puerto Rico</span>
   </footer>
@@ -783,6 +793,7 @@ function downloadSTL(){
       var a=document.createElement("a");
       a.href=URL.createObjectURL(blob);
       a.download="lithophane_islaimpresa.stl";
+      isla("STL Downloaded",{shape:shape,detail:detail,tris:lastMesh.tris.length});
       document.body.appendChild(a);a.click();
       setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1500);
     }catch(e){}
@@ -828,7 +839,7 @@ function applyLang(){
   updateStat();
   try{localStorage.setItem("islaLang",lang);}catch(e){}
 }
-function setLang(l){lang=l;applyLang();}
+function setLang(l){isla("Lang Switch",{to:l,page:"LithophaneMaker"});lang=l;applyLang();}
 
 function updateThemeBtn(){
   var dark=document.documentElement.getAttribute("data-theme")==="dark";
@@ -841,7 +852,7 @@ function toggleTheme(){
   updateThemeBtn();
   if(gray)drawHistogram();
 }
-function signupThanks(){
+function signupThanks(){isla("Email Signup",{page:"LithophaneMaker"});
   g("signupForm").hidden=true;g("signupMicro").hidden=true;g("signupThanksMsg").hidden=false;
 }
 
