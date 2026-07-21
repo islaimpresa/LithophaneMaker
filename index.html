@@ -217,34 +217,34 @@
         </div>
 
         <div class="ctrl" id="arcCtrl" style="display:none">
-          <label id="lblArc">Curve angle <span class="val" id="arcVal">120°</span></label>
+          <label id="lblArc"><span id="lblArcTxt">Curve angle</span> <span class="val" id="arcVal">120°</span></label>
           <input type="range" id="arc" min="30" max="360" step="5" value="120" oninput="onParam()">
         </div>
 
         <div class="row2">
           <div class="ctrl">
-            <label id="lblWidth">Width <span class="val" id="widthVal">100 mm</span></label>
+            <label id="lblWidth"><span id="lblWidthTxt">Width</span> <span class="val" id="widthVal">100 mm</span></label>
             <input type="number" id="width" min="20" max="300" step="1" value="100" oninput="onSizeInput()">
           </div>
           <div class="ctrl">
-            <label id="lblHeightOut">Height <span class="val" id="heightVal">—</span></label>
+            <label id="lblHeightOut"><span id="lblHeightOutTxt">Height</span> <span class="val" id="heightVal">—</span></label>
             <input type="number" id="heightLock" value="0" disabled style="opacity:.6">
           </div>
         </div>
 
         <div class="row2">
           <div class="ctrl">
-            <label id="lblMinT">Min thickness <span class="val" id="minTVal">0.8 mm</span></label>
+            <label id="lblMinT"><span id="lblMinTTxt">Min thickness</span> <span class="val" id="minTVal">0.8 mm</span></label>
             <input type="range" id="minT" min="0.4" max="1.6" step="0.1" value="0.8" oninput="onParam()">
           </div>
           <div class="ctrl">
-            <label id="lblMaxT">Max thickness <span class="val" id="maxTVal">3.0 mm</span></label>
+            <label id="lblMaxT"><span id="lblMaxTTxt">Max thickness</span> <span class="val" id="maxTVal">3.0 mm</span></label>
             <input type="range" id="maxT" min="1.5" max="5" step="0.1" value="3.0" oninput="onParam()">
           </div>
         </div>
 
         <div class="ctrl">
-          <label id="lblDetail">Detail (resolution) <span class="val" id="detailVal">Standard</span></label>
+          <label id="lblDetail"><span id="lblDetailTxt">Detail (resolution)</span> <span class="val" id="detailVal">Standard</span></label>
           <div class="seg" role="group" aria-label="Detail">
             <button id="detailDraft" onclick="setDetail('draft')">Draft</button>
             <button id="detailStd" class="active" onclick="setDetail('std')">Standard</button>
@@ -254,15 +254,15 @@
         </div>
 
         <div class="ctrl">
-          <label id="lblBright">Brightness <span class="val" id="brightVal">0</span></label>
+          <label id="lblBright"><span id="lblBrightTxt">Brightness</span> <span class="val" id="brightVal">0</span></label>
           <input type="range" id="bright" min="-100" max="100" step="1" value="0" oninput="onImageAdjust()">
         </div>
         <div class="ctrl">
-          <label id="lblContrast">Contrast <span class="val" id="contrastVal">0</span></label>
+          <label id="lblContrast"><span id="lblContrastTxt">Contrast</span> <span class="val" id="contrastVal">0</span></label>
           <input type="range" id="contrast" min="-100" max="100" step="1" value="0" oninput="onImageAdjust()">
         </div>
         <div class="ctrl">
-          <label id="lblGamma">Gamma <span class="val" id="gammaVal">1.0</span></label>
+          <label id="lblGamma"><span id="lblGammaTxt">Gamma</span> <span class="val" id="gammaVal">1.0</span></label>
           <input type="range" id="gamma" min="0.4" max="2.6" step="0.05" value="1.0" oninput="onImageAdjust()">
         </div>
 
@@ -276,11 +276,11 @@
           <label class="chk" style="margin-bottom:12px"><input type="checkbox" id="frameOn" onchange="onParam()"> <span id="lblFrameOn">Add supporting frame border</span></label>
           <div class="row2" id="frameRow" style="display:none">
             <div class="ctrl">
-              <label id="lblFrameW">Frame width <span class="val" id="frameWVal">5 mm</span></label>
+              <label id="lblFrameW"><span id="lblFrameWTxt">Frame width</span> <span class="val" id="frameWVal">5 mm</span></label>
               <input type="range" id="frameW" min="2" max="15" step="0.5" value="5" oninput="onParam()">
             </div>
             <div class="ctrl">
-              <label id="lblFrameH">Frame height <span class="val" id="frameHVal">3.0 mm</span></label>
+              <label id="lblFrameH"><span id="lblFrameHTxt">Frame height</span> <span class="val" id="frameHVal">3.0 mm</span></label>
               <input type="range" id="frameH" min="1.5" max="6" step="0.1" value="3.0" oninput="onParam()">
             </div>
           </div>
@@ -388,7 +388,8 @@ var I18N={
     sSpeed:"Print speed",sSpeedV:"25–35 mm/s",
     sTopBottom:"Top/bottom layers",sTopBottomV:"6–10",
     sCooling:"Cooling fan",sCoolingV:"100% after layer 1",
-    sBacklight:"Backlight",sBacklightV:"Diffused warm LED (2700–3000 K)"
+    sBacklight:"Backlight",sBacklightV:"Diffused warm LED (2700–3000 K)",
+    lblArcTxt:"Curve angle",lblWidthTxt:"Width",lblHeightOutTxt:"Height",lblMinTTxt:"Min thickness",lblMaxTTxt:"Max thickness",lblDetailTxt:"Detail (resolution)",lblBrightTxt:"Brightness",lblContrastTxt:"Contrast",lblGammaTxt:"Gamma",lblFrameWTxt:"Frame width",lblFrameHTxt:"Frame height"
   },
   es:{
     tagline:"// creador de lithophanes",
@@ -433,7 +434,8 @@ var I18N={
     sSpeed:"Velocidad",sSpeedV:"25–35 mm/s",
     sTopBottom:"Capas sup./inf.",sTopBottomV:"6–10",
     sCooling:"Ventilador",sCoolingV:"100% tras capa 1",
-    sBacklight:"Retroiluminación",sBacklightV:"LED cálido difuso (2700–3000 K)"
+    sBacklight:"Retroiluminación",sBacklightV:"LED cálido difuso (2700–3000 K)",
+    lblArcTxt:"Ángulo de curva",lblWidthTxt:"Ancho",lblHeightOutTxt:"Alto",lblMinTTxt:"Grosor mín.",lblMaxTTxt:"Grosor máx.",lblDetailTxt:"Detalle (resolución)",lblBrightTxt:"Brillo",lblContrastTxt:"Contraste",lblGammaTxt:"Gamma",lblFrameWTxt:"Ancho del marco",lblFrameHTxt:"Alto del marco"
   }
 };
 
@@ -807,8 +809,8 @@ function applyLang(){
   var t=I18N[lang];
   document.documentElement.lang=lang;
   ["tagline","slogan","subtext","pageTitle","dropBig","dropSmall","previewBadge","previewHint","tip",
-   "lblShape","lblArc","lblWidth","lblHeightOut","lblMinT","lblMaxT","lblDetail","lblBright","lblContrast","lblGamma",
-   "lblInvert","lblMirror","lblAdv","lblFrameOn","lblFrameW","lblFrameH","resetBtn","genBtn","workingText",
+   "lblShape","lblArcTxt","lblWidthTxt","lblHeightOutTxt","lblMinTTxt","lblMaxTTxt","lblDetailTxt","lblBrightTxt","lblContrastTxt","lblGammaTxt",
+   "lblInvert","lblMirror","lblAdv","lblFrameOn","lblFrameWTxt","lblFrameHTxt","resetBtn","genBtn","workingText",
    "settingsTitle","settingsIntro","ctaTitle","ctaText","ctaBtn",
    "signupTitle","signupSub","signupBtn","signupMicro","signupThanksMsg","footerText",
    "navFdm","navResin","navTracker","navRTracker","navConverter","navTrouble","navMaterial","navDrying","navTolerance"
